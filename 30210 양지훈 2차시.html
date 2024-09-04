@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+    let date= new Date();
+    let time=date.getHours();
+    let greeting;
+    if(time<12){
+        greeting="Good Morning";
+        document.write(greeting);
+    }
+
+        let date2= new Date();
+        let time2=date2.getHours();
+        let greeting2;
+        if(time2<12){
+            greeting2="Good Mornig2";
+            document.write(greeting2);
+        }
+        else{
+            greeting2="Good afternoon";
+            document.write(greeting2+"<br>");
+        }
+        document.write("11<br>");
+
+        let month3= new Date();
+        let month=month3.getMonth();
+        let greeting3;
+        if(month<=5){
+            greeting3="상반기입니다";
+            document.write(greeting3);
+        }
+        else{
+            greeting3="하반기입니다";
+            document.write(greeting3+"<br>");
+        }
+        
+        let temper=prompt("온도를 입력하세요.","-20~40사이의 정수로");
+        temper=parseInt(temper);
+        if(temper<=0){
+            alert("많이 춥습니다. 장감, 목도리를 챙기세요");
+        }
+        else if(temper<=10){
+            alert("영상이지만 따듯한 옷을 입으세요");
+        }
+        else if(temper<=20){
+            alert("가벼운 옷차림을 하세요");
+        }
+        else{
+            alert("더위에 대비하세요");
+        }
+
+        let month4= new Date();
+        let month1=month4.getMonth();
+        let greeting4;
+        if(month1<=2){
+                alert("1분기입니다");
+        }
+        else if(month1<=5){
+                alert("2분기입니다");
+        }
+        else if(month1<=8){
+                alert("3분기입니다");
+        }
+        else if(month1<=11){
+                alert("4분기입니다");
+        }
+
+        let grade=prompt("성적을 입력하시오:","A~D사이의 문자로");
+        
+            if((grade=!'A')&&(grade=!'B')&&(grade=!'C')&&(grade=!'D') ){
+
+                grade=prompt("성적을 잘못입력하였습니다. 다시 성적을 입력해주세요","A~D사이의 문자로")
+            }
+            switch(grade){
+                case 'A': alert("최고 성적입니다. 잘했어요.");
+                break;
+                case 'B': alert("좋은 성과입니다.");
+                break;
+                case 'C': alert("조금만 더 해봅시다");
+                break;
+                case 'D': alert("재수강해야 합니다");
+            }
+    </script>
+</body>
+</html>

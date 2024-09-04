@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{list-style: none;}
+        #main_header{
+            width: 960px;
+            height: 160px;
+            margin: 0 auto;
+            position: relative;
+        }
+        #main_header>#title{
+            position: absolute;
+            left: 20px; top: 30px;
+        }
+        #main_header>#main_gnb{
+            position: absolute;
+            right: 0; top: 30px;
+        }
+        #main_header>#main_Inb{
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+        }
+        #main_gnb>ul{overflow: hidden;}
+        #main_gnb > ul > li{float: left;}
+
+        #main_Inb{overflow: hidden;}
+        #main_Inb>ul>li{float: left;}
+        #main_gnb> ul > li > a {
+            display: block;
+            padding: 10px 20px;
+            border: 1px solid black;
+        }
+        #main_gnb > ul >li:first-child > a {border-radius:10px 0 0 10px ;}
+        #main_gnb > ul > li:last-child > a {border-radius: 0 10px 10px 0;}
+        #main_Inb > ul >li:first-child > a {border-radius:10px 0 0 10px ;}
+        #main_Inb> ul > li > a {
+            display: block;
+            padding: 10px 20px;
+            border: 1px solid black;
+        }
+        #main_Inb > ul > li:last-child > a {border-radius: 0 10px 10px 0;}
+        #content{
+            width: 960px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #content > #main_section{
+            width: 750px;
+            float: left;
+        }
+        #content > #main_aside{
+            width: 200px;
+            float: right;
+        }
+        #main_section > article{
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius:20px 0 50px 0 ;
+        }
+        #main_footer{
+            width: 960px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+        input:nth-of-type(1){display: none;}
+        input:nth-of-type(1)~div:nth-of-type(1){display: none;}
+        input:nth-of-type(1):checked~div:nth-of-type(1){display: block;}
+
+        input:nth-of-type(2){display: none;}
+        input:nth-of-type(2)~div:nth-of-type(2){display: none;}
+        input:nth-of-type(2):checked~div:nth-of-type(2){display: block;}
+        section.buttons{overflow: hidden;}
+        section.buttons> label{
+            display: block;
+            float: left;
+            width: 95px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid black;
+
+            background: black;
+            color: white;
+        }
+        input:nth-of-type(1):checked~section.buttons > label:nth-of-type(1){
+            background: white;
+            color: black;
+        }
+        input:nth-of-type(2):checked~section.buttons > label:nth-of-type(2){
+            background: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header id="main_header">
+        <div id="title">    
+            <h2>기사+뉴스</h2>
+        </div>
+        <nav id="main_gnb">    
+        <ul>
+            <li><a href="=#">HTML</a></li>
+            <li><a href="=#">CSS</a></li>
+            <li><a href="=#">JAVASCRIPT</a></li>
+            <li><a href="=#">jQuery</a></li>
+        </ul>
+        </nav>
+        <nav id="main_Inb">  
+            <ul>
+                <li><a href="=#">web</a></li>
+                <li><a href="=#">mobile</a></li>
+                <li><a href="=#">Game</a></li>
+                <li><a href="=#">Simulation</a></li>
+                <li><a href="=#">Date</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="content">
+        <section id="main_section">
+            <article>
+                <h2>[특징주] SM엔터, 소속가수 루머 강경대응 입장에 3%대 반등</h2>
+                <p>
+                    (서울=연합뉴스) 조성흠 기자 
+                    = 소속 가수 관련 루머로 전날 8%대 급락했던 에스엠[041510]이 5일 장 초반 3% 넘게 반등하고 있다.
+                    오전 9시 40분 기준 에스엠은 전날보다 2천700원(3.30%) 오른 8만4천600원에 거래되고 있다.
+                    8만4천900원(3.66%)으로 시작한 에스엠은 장 초반 8만5천300원(4.15%)까지 오르기도 했다.
+                    전날오후 온라인 커뮤니티에서는 그룹 NCT 멤버 쟈니·해찬과 관련한 일본발 루머가 유포됐고, 
+                    이후 에스엠 주가는 종가 기준 전 거래일보다 8.18% 급락한 8만1천900원을 기록했다.
+                    그러나 에스엠은 이날 관련 루머에 대해 "확인 결과 전혀 사실이 아니다"라며 루머 유포자에 대한 법적 대응 방침을 밝혔다.
+                </p>
+            </article>
+            <article>
+                <h2>1∼4월 글로벌 배터리 사용량 21.8%↑…K-배터리 3사 점유율↓</h2>
+                <p>
+                    (서울=연합뉴스) 장하나 기자 
+                    = 글로벌 전기차 시장의 캐즘(Chasm·일시적 수요 정체) 현상에도 전기차 배터리 사용량은 20%대의 성장세를 이어갔다.
+                    5일 에너지 전문 시장조사업체 SNE리서치에 따르면 
+                    올해 1∼4월 세계 각국에 등록된 순수전기차·플러그인하이브리드차(PHEV)·하이브리드차(HEV)에 탑재된 배터리 총사용량은 216.2GWh(기가와트시)로, 
+                    전년 동기 대비 21.8% 성장했다.
+                    국내 배터리 3사의 점유율은 전년 동기 대비 2.4%포인트 하락한 22.8%를 기록했다.
+                    LG에너지솔루션은 전년 동기 대비 7.8% 증가한 28.0GWh(점유율 13.0%)로 3위에 자리했다.
+                    삼성SDI는 국내 3사 중 가장 높은 32.9%의 성장률을 기록, 10.9GWh(점유율 5.1%)로 4위를 차지하며 전년 동기 대비 2계단 상승했다. 
+                    BMW i4·5·X, 아우디 Q8 e-트론 등이 유럽에서 견조한 판매량을 나타냈고 북미에서 리비안 R1T·R1S가 높은 판매량을 기록하면서 고성장세를 이어갔다.
+                    반면 SK온은 전년 동기 대비 2.0% 감소한 10.3GWh(점유율 4.8%)로 5위다.
+                    이는 현대자동차그룹의 아이오닉5와 EV6 판매량 감소에 따른 것으로 아이오닉5와 EV6 모두 최근 페이스리프트(부분변경)를 거치며 
+                    SK온의 4세대 배터리가 탑재돼 2분기부터는 판매량이 회복될 것으로 전망된다고 SNE리서치는 밝혔다.
+                    중국 CATL은 전년 동기 대비 30.0% 증가한 81.4GWh(점유율 37.7%)로 글로벌 1위 자리를 견고히 유지했다. 
+                    BYD(비야디)도 18.3% 성장한 33.2GWh(15.4%)로 2위를 지켰다.
+                    일본 업체 중 유일하게 10위 내에 이름을 올린 파나소닉은 29.5% 감소한 10.2GWh로 6위에 그쳤다.
+                    테슬라 모델3의 부분변경으로 인한 판매량 감소와 파나소닉 배터리를 탑재하는 모델3 퍼포먼스 트림의 출시 지연 등이 영향을 미친 것으로 보인다.
+                    SNE리서치는 "지속되는 고금리 기조, 비싼 전기차 가격, 신모델 출시 지연, 충전 인프라 부족 등으로 전기차 후방산업인 배터리 업계에도 부정적인 영향을 미치고 있다"며 
+                    "다만 최근 양극재 가격에 큰 영향을 미치는 메탈가가 저점을 통과해 상승세를 보이면서 2분기 이후 배터리 업체의 실적이 점차 반등할 것"이라고 말했다.
+                </p>
+            </article>
+            <article>
+                <h2>클린스만 "토트넘, GK 외 전 포지션 보강하길…손흥민은 잘했어"</h2>
+                <p>
+                    (서울=연합뉴스) 이의진 기자 
+                    = 한국 축구대표팀을 이끌었던 위르겐 클린스만 전 감독은 주장 손흥민이 돋보였지만 토트넘이 전력을 대폭 강화해야 한다고 조언했다.
+                    토트넘은 4일(현지시간) 홈페이지를 통해 클린스만 전 감독이 최근 스포츠 매체 ESPN 프로그램에 출연, 구단에 대해 내놓은 분석을 소개했다.
+                    클린스만 전 감독은 토트넘이 올여름 이적 시장에서 골키퍼를 제외한 전 포지션에 걸쳐 선수단을 보강해야 한다고 봤다.
+                    그는 "굴리엘모 비카리오가 골키퍼 포지션에서 시즌 내내 환상적인 활약을 보여주긴 했지만
+                    포백 쪽과 수비형 미드필더를 포함한 전 포지션을 보강해야 한다"며 "스트라이커도 한, 두 명 더 필요하다"고 진단했다.
+                    그러면서 "그렇게 되면 최소한 (한 시즌에 토트넘이) 15골은 더 넣을 거다.
+                    15골"이라며 "손흥민이 혼자 힘으로 잘해줬고, 데얀 쿨루세브스키도 조금 (활약을) 보여줬지만 다른 선수들은 그렇지 않았다"고 덧붙였다.
+                    클린스만 전 감독은 토트넘을 이끄는 안지 포스테코글루 감독이 2024-2025시즌 진정한 시험대에 오를 것으로 내다봤다.
+                    클린스만 전 감독은 "포스테코글루 감독은 (새 시즌) 이전과는 다른 수준의 압력에 직면할 거다. 이전과는 기대치가 달라졌다"며 
+                    "시장으로 가서 재능 있는 선수들을 구해와야 한다"고 말했다.
+                    지난 2월 2023 아시아축구연맹(AFC) 아시안컵 준결승에서 요르단에 충격적인 패배를 당한 후 우리나라 대표팀 사령탑 자리에서 경질된 클린스만 전 감독에게 토트넘은 특별한 구단이다.
+                    클린스만 전 감독은 1994-1995시즌과 1997-1998시즌에 토트넘에서 뛰었다.
+                    활약한 시간은 짧지만, 강등권에서 팀을 구해내는 등 강렬한 인상을 남겨 토트넘의 '레전드'로 인정받는다.
+                    토트넘은 올 시즌 잉글랜드 프리미어리그(EPL)를 5위(20승 6무 12패·승점 66)로 마쳤다.
+                    주장을 맡은 손흥민은 17골 10도움을 기록했다. 리그 득점 랭킹에서는 8위, 도움 랭킹에서는 공동 3위에 이름을 올렸다.
+                </p>
+            </article>
+        </section>
+        <aside id="main_aside">
+            <h3>서울시 '해치&소울프랜즈' 이모티콘 10만개 전량 소진</h3>
+            <p>
+                (서울=연합뉴스) 최윤선 기자 
+                = 서울시는 상징 캐릭터 '해치&소울프렌즈'를 활용한 이모티콘이 지난 4일 배포된 지 4시간 반 만에 전량 소진됐다고 5일 밝혔다.
+                이모티콘은 전날 오후 2시 서울시 카카오톡 채널을 새로 추가한 10만명에게 배포됐다.
+                일상에서 느끼는 다양한 감정에 해치&소울프렌즈의 응원 메시지를 더한 16개의 이모티콘으로 재미와 활용성을 높였다.
+                시는 시민 반응에 힘입어 해치&소울프렌즈 이모티콘의 2차 제작과 배포를 검토한다.
+                마채숙 서울시 홍보기획관은 "해치&소울프렌즈와 함께 더욱 다채로운 콘텐츠를 통해 서울의 매력을 널리 알리겠다"고 말했다.
+
+            </p>
+            <input id="first" type="radio" name="tab" checked="checked" />
+            <input id="second" type="radio" name="tab" />
+            <section class="buttons">
+                <label for="first">메인</label>
+                <label for="second">재미꺼리</label>
+            </section>
+            <div>
+                <ul>
+                    <li><a href="메인.html" target="_self">메인페이지로</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="[특징주] SM엔터, 소속가수 루머 강경대응 입장에 3%대 반등.html" target="_self">[특징주] SM엔터, 소속가수 루머 강경대응 입장에 3%대 반등</a></li>
+                    <li><a href="1∼4월 글로벌 배터리 사용량 21.8%↑…K-배터리 3사 점유율↓.html" target="_self">1∼4월 글로벌 배터리 사용량 21.8%↑…K-배터리 3사 점유율↓</a></li>
+                    <li><a href="서울시 '해치&소울프랜즈' 이모티콘 10만개 전량 소진.html" target="_self">서울시 '해치&소울프랜즈' 이모티콘 10만개 전량 소진</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+    <footer id="main_foorer">
+        <h3>뉴스+기사 basic</h3>
+        <address> Website Layout Basic</address>
+    </footer>
+</body>
+</html>
